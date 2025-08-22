@@ -60,17 +60,16 @@ function shoppingCartContent() {
 
 function pushToShoppingCart(i, category, index) {
   let selectedDish = dishes[i][category][index];
-  let existingDish = shoppingCart.indexOf(selectedDish);
+  let existingDish = shoppingCart.find(dish => dish.Name === selectedDish.Name);
 
-  if (existingDish == -1) {
-    shoppingCart.push({
-      ...selectedDish,
-      quantity: 1,
-    });
-  } else {
-    existingDish.quantity++;
-  }
-
+    if (existingDish) {
+        existingDish.quantity++;
+    } else {
+        shoppingCart.push({
+            ...selectedDish,
+            quantity: 1
+        });
+    };
   renderShoppingCart();
 }
 
