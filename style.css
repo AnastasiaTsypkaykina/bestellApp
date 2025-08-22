@@ -111,6 +111,17 @@
     height: 150px;
     object-fit: cover;
 }
+
+.shopping-cart{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5px;
+    min-height: calc(100vh - 100px);
+    box-shadow: 5px 0 10px gray;
+    margin-bottom: 20px;
+}
 .shopping-cart-content{
     width: 100%;
     position: sticky;
@@ -134,6 +145,93 @@
     align-items: center;
     z-index: 4;
 }
+.btn-shopping-cart{
+    width: 300px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    font-size: 24px;    
+    padding: 5px 20px;
+    border-radius: 17px;
+    border: none;
+    background-color: rgb(215, 215, 215);
+    cursor: pointer;
+}
+
+.btn-shopping-cart:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+.btn-shopping-cart:active{
+    background-color: rgb(230, 230, 230);
+}
+
+.btn-shopping-cart-position{
+    position: relative;
+    width: 100%;
+}
+
+.btn-shopping-cart-order-position{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dish-selector-plus{
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(255 139 0);
+    
+}
+
+.dish-selector-plus:hover{
+    transform: scale(1.3);
+}
+
+.dish-selector-plus:active{
+    transform: scale(0.9);
+}
+
+.dish-selector-shopping-cart-plus{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(255 139 0);
+    margin: 0 20px;
+}
+
+.dish-selector-shopping-cart-minus{
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(255 139 0);
+    margin: 0 20px;
+}
+
+.trash-bin:hover,
+.dish-selector-shopping-cart-plus:hover,
+.dish-selector-shopping-cart-minus:hover{
+    transform: scale(1.1);
+}
+
+.trash-bin:active,
+.dish-selector-shopping-cart-plus:active,
+.dish-selector-shopping-cart-minus:active{
+    transform: scale(0.9);
+}
+
+.trash-bin{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
 .dish-card{
     width: 100%;
     position: relative;

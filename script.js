@@ -1,15 +1,14 @@
 function init() {
     renderDishes (0, "Pizza");
+    renderShoppingCart();
 }
 
 function renderDishes(i, category,) {
     document.getElementById("dish-card-place").innerHTML = `<h3 class="dishes-header">${category}</h3>`;
-
     for (let index = 0; index < dishes[i][category].length; index++) {
         let onePrice = dishes[i][category][index].Price * 1;
         let finalOnePrice = onePrice.toFixed(2);
-        document.getElementById("dish-card-place").innerHTML += dishesTemplate(i, category, index, dishes[i][category][index], finalOnePrice);
-    }     
+        document.getElementById("dish-card-place").innerHTML += dishesTemplate(i, category, index, dishes[i][category][index], finalOnePrice);    }     
 }
 
 function dialogBubblingPrevention(event) {
@@ -20,30 +19,75 @@ function openCloseMenu() {
     document.getElementById("menu").classList.toggle('menu_box_closed');
 }
 
-function dishesTemplate(i, category, index, singleDish, finalOnePrice) {
-    return `
+function closeMenu() {
+    document.getElementById("menu").classList.add('menu_box_closed');
+}
+
+let shoppingCart =[];
+
+function renderShoppingCart() {
+    shoppingCartContent();
+    let subTotalValue = calculateSubTotal();
+    let deliveryCostsValue = 2;
+    let calculateTotalValue = calculateTotal(subTotalValue, deliveryCostsValue);
+
+    setPrice('sub-total', `${subTotalValue.toFixed(2)} €`);
+    setPrice('delivery-costs', `${deliveryCostsValue.toFixed(2)} €`);
+    setPrice('total-price', `${calculateTotalValue.toFixed(2)} €`);   
+}
+
+function shoppingCartContent() {
+    let originalShoppingCart = document.getElementById('shopping-cart-dishes'); 
+    originalShoppingCart.innerHTML = '';
+    for (let i = 0; i < shoppingCart.length; i++) {
+        let price = shoppingCart[i].Price * shoppingCart[i].quantity;
+        let finalPrice = price.toFixed(2);
+        originalShoppingCart.innerHTML += shoppingCartTemplate(shoppingCart[i], finalPrice);        
+    };
+}
+
+
+function pushToShoppingCart(i, category, index) {
+    let selectedDish = dishes[i][category][index];
+    let existingDish = shoppingCart.indexOf(selectedDish);
+
+    if (existingDish==-1) {
+        shoppingCart.push({
+            ...selectedDish,
+            quantity: 1
+        });
         
-        <div class="dish-card" id="dish-card">
+    } else {
+        existingDish.quantity++;
+        
+    };
+    
+    renderShoppingCart();  
+}
 
-            <h3 id="dish-card-dish">${singleDish.Name}</h3> 
+function calculateSubTotal() {
+    let subTotal = 0;
 
-            <br>
+    for (let i=0; i < shoppingCart.length; i++) {
+        subTotal += shoppingCart[i].Price * shoppingCart[i].quantity;
+    };
 
-            <p>${finalOnePrice} €</p>
+    return subTotal;
+}
 
-            <br>
+function calculateTotal(subTotal, delivery) {
+    let total = 0;
 
-            <p>${singleDish.Ingredients}</p> 
+    total = subTotal + delivery;
+    
+    return total;
+}
 
-            <div class="dish-selector">
+function setPrice(id, text) {
+    let element = document.getElementById(id);
 
-                <section class="dish-selector-plus">+
-                </section>
-
-            </div>
-
-        </div>
-
-        `;
+    if (element) { 
+        element.textContent = text;
+    };
 }
 
