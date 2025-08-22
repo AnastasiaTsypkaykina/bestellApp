@@ -12,6 +12,14 @@ function renderDishes(i, category,) {
     }     
 }
 
+function dialogBubblingPrevention(event) {
+    event.stopPropagation();
+}
+
+function openCloseMenu() {
+    document.getElementById("menu").classList.toggle('menu_box_closed');
+}
+
 function dishesTemplate(i, category, index, singleDish, finalOnePrice) {
     return `
         

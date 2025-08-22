@@ -7,6 +7,12 @@
 .logo-navbar{
     width: 150px;
 }
+.burger-menu-button-bar{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
 .burger-menu-button:hover{
     scale: 1.1;
     cursor: pointer;
@@ -38,12 +44,7 @@
 .d_none {
     display: none;
 }
-.burger-menu-button-bar{
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-}
+
 
 .pizza-logo{
     width: 140px;
@@ -154,6 +155,30 @@
     top: 0;
     right: 0;
     padding-bottom: 5px;
+}
+.menu_box {
+
+    background-color: rgba(239, 239, 239, 1);
+    border: 1px solid rgba(205, 205, 205, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    gap: 23px;
+    transition: all 175ms ease-in-out;
+    z-index: 10;
+
+}
+.menu_box_closed {
+
+    opacity: 0;
+    z-index: -1;;
+
 }
 
 

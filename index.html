@@ -19,22 +19,26 @@
     <!-- Header -->
     <header class="navbar" id="navbar">
       <div class="container-navbar">
-        <img
-          class="logo-navbar"
+        <img class="logo-navbar"
           src="./img/Material/Logo/Bestell App- Logo.svg"
           alt="Bestell App Logo"
         />
-        <nav class="burger-menu-button">
+        <nav onclick="openCloseMenu(), dialogBubblingPrevention(event)" class="burger-menu-button">
           <div class="burger-menu-button-bar"></div>
           <div class="burger-menu-button-bar"></div>
           <div class="burger-menu-button-bar"></div>
         </nav>
       </div>
     </header>
-    <!-- <nav class="menu_box menu_box_closed" id="menu">
-      <a class="navlink" href="#"> Pizza </a>
-      <a class="navlink" href="#"> Pasta </a>
-    </nav> -->
+ <nav onclick="dialogBubblingPrevention(event)" class="menu_box  menu_box_closed" id="menu">
+
+        <a onclick="renderDishes(0, 'Pizza')" class="navlink" href="#">
+            Pizza
+        </a>
+        <a onclick="renderDishes(1, 'Pasta')" class="navlink" href="#">
+            Pasta
+        </a>
+  </nav>
 
     <!-- Main-content -->
      <div class="all-content">
