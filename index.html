@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="./assets/standard.css">
     <script src="./script.js"></script>
+    <script src="./database.js"></script>
   </head>
-  <body>
+  <body onload ="init()">
 
     <!-- Header -->
     <header class="navbar" id="navbar">
@@ -30,13 +31,64 @@
         </nav>
       </div>
     </header>
-    <nav class="menu_box menu_box_closed" id="menu">
+    <!-- <nav class="menu_box menu_box_closed" id="menu">
       <a class="navlink" href="#"> Pizza </a>
       <a class="navlink" href="#"> Pasta </a>
-    </nav>
+    </nav> -->
 
     <!-- Main-content -->
+     <div class="all-content">
+        <main class="main-content">
+            <div class="img-container">
+                <img class="restaurant-img" src="./img/pizza_main.jpg" alt="Pizza Foto from the Restaurant">
+                <div class="img-overlay-div">
+                    <img class="pizza-logo" src="./img/pizza-logo.png" alt="Pizza delivery Logo">
+                </div>
+              </div>
+            <section class="restaurant-content">
+                <h2 class="restaurant-name">Pizza House</h2>
+                <p class="bewertung">Bewertung (4.6 von 5 Sternen)</p>
+                <p class="lieferkosten">Die niedrigsten Lieferkosten, nur 2 Euro!!</p>              
+                <div id="scroll-point"></div>
+                <nav class="dish-selection" id="dish-selection">
+                    <button class="btn" onclick="renderDishes(0, 'Pizza')">Pizza</button>
+                    <button class="btn" onclick="renderDishes(1, 'Pasta')">Pasta</button>
+                </nav>
+                  <img class="dish-main-img" id="dish-main-img" src="./img/pizza_main.jpg" alt="Dish Image">            
+                <div id="dish-card-place">  
+                </div>
+            </section>
+        </main>
 
+            <section class="shopping-cart d-none-u-900px">
+               <section class="shopping-cart-content">
+                <h2 class="ta-center">Warenkorb</h2>
+                <div id="shopping-cart-dishes">    
+                </div>
+
+                <div class="df-sb ml-mr-20 mt-20">
+                    <p>Zwischensumme</p>
+                    <p id="sub-total"></p> 
+                </div>
+                
+                <div class="df-sb ml-mr-20">
+                    <p>Lieferkosten</p>
+                    <p id="delivery-costs"></p>
+                </div>
+
+                <div class="df-sb ml-mr-20">
+                    <b>Gesamt</b>
+                    <b id="total-price"></b>
+                </div>
+
+                <div class="btn-shopping-cart-order-position">
+                    <button class="btn">Bestellung abgeben</button>
+                </div>
+             </section>
+    </div>
+                
+
+                
 
 
 

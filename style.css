@@ -22,8 +22,7 @@
 }
 .btn{
     font-size: 24px;    
-    padding: 5px 20px;
-    border-radius: 17px;
+    padding: 5px 20px;    
     border: none;
     background-color: rgb(215, 215, 215);
     cursor: pointer;
@@ -45,6 +44,119 @@
     background-color: white;
     margin: 6px 0;
 }
+
+.pizza-logo{
+    width: 140px;
+    padding-bottom: 50px;
+}
+.restaurant-img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+.img-overlay-div{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.all-content{
+    display: flex; 
+    background-color: rgb(250, 250, 250);
+}
+
+.main-content{
+    width: 100%;
+    
+}
+.restaurant-content{
+    padding: 20px 10px;
+    
+}
+.bewertung{
+    color: rgb(255 139 0);
+    margin-top: 20px;
+    
+}
+.dish-selection{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: rgb(250, 250, 250);
+    padding: 10px 0;
+    overflow: scroll;
+    gap: 10px;
+    scrollbar-width: none;
+}
+.dish-main-img{
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.shopping-cart-content{
+    width: 100%;
+    position: sticky;
+    top: 20px;
+}
+.shopping-cart-item{
+    margin-top: 20px;
+    z-index: 3;
+
+}
+.shopping-cart-amount-and-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.shopping-cart-item-amount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 4;
+}
+.dish-card{
+    width: 100%;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    height: 150px;
+    margin-top: 20px;
+    padding: 15px;
+}
+.dish-selector{
+    
+    width: 45px;
+    height: 45px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-bottom: 5px;
+}
+
+
 .footer{
     height: 100px;
     background-color: rgb(255 139 0);
