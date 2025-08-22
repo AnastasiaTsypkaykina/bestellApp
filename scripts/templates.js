@@ -35,19 +35,19 @@ function shoppingCartTemplate(oneDish, finalPrice) {
 
                 <section class="shopping-cart-item-amount">
 
-                    <div class="dish-selector-shopping-cart-minus" >-
+                    <div class="dish-selector-shopping-cart-minus" onclick="decreaseQuantity('${oneDish.Name}')">-
                     </div>
 
                     <p>${oneDish.quantity}</p>
 
-                    <div class="dish-selector-shopping-cart-plus" >+
+                    <div class="dish-selector-shopping-cart-plus" onclick="addQuantity('${oneDish.Name}')">+
                     </div>
 
                 </section>
 
                 <p>${finalPrice} €</p>
 
-                <img  class="trash-bin" src="./img/trash.svg" alt="trash-bin">
+                <img  class="trash-bin" src="./img/trash.svg" alt="trash-bin" onclick="removeFromCart('${oneDish.Name}')">
 
             </div>  
 
