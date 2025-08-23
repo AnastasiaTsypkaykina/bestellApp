@@ -15,7 +15,7 @@
     <script src="./menu.js"></script>
     <script src="./scripts/templates.js"></script>
   </head>
-  <body onload ="init(), closeMenu()">
+  <body  onclick="closeOrderDialog()" onload ="init()">
 
     <!-- Header -->
     <header class="navbar" id="navbar">
@@ -87,10 +87,20 @@
                 </div>
 
                 <div class="btn-shopping-cart-order-position">
-                    <button class="btn">Bestellung abgeben</button>
+                  <button onclick="renderOrderDialog(), dialogBubblingPrevention(event)" class="btn">Bestellung abgeben</button>
                 </div>
              </section>
     </div>
+
+    <section  id="overlay" class="overlay d-none">
+       <div onclick="dialogBubblingPrevention(event)" id="order-dialog" class="dialog-ordered d-none order-dialog">
+                <h3 class="fs-24px">Vielen Dank für Ihre Bestellung</h3>
+                </br>
+                <p>Ihre Lieferung wird in den nächsten </br> 60 Minuten bei Ihnen eintreffen</p>
+        </div>
+
+
+    </section>
                 
 
                 

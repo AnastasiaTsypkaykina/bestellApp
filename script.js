@@ -130,3 +130,23 @@ function removeFromCart(name) {
     shoppingCart.splice(index, 1);
     renderShoppingCart();
 }
+
+function renderOrderDialog() {
+    let orderDialog = document.getElementById('order-dialog');
+    let overlay = document.getElementById('overlay');
+
+    if (shoppingCart.length >= 1) {
+        //respShoppingCartCloser();
+        orderDialog.classList.remove('d-none');
+        overlay.classList.remove('d-none');
+        shoppingCart = [];
+        renderShoppingCart();        
+    };
+}
+
+function closeOrderDialog() {
+    let orderDialog = document.getElementById('order-dialog');
+    let overlay = document.getElementById("overlay");
+    orderDialog.classList.add('d-none');
+    overlay.classList.add("d-none");    
+}
