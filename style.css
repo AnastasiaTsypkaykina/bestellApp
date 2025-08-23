@@ -185,12 +185,17 @@
     
 }
 
-.dish-selector-plus{
+.filter-orange{
     cursor: pointer;
-    font-size: 40px;
-    font-weight: bolder;
-    color: rgb(255 139 0);
-    
+    width: 35px;
+    padding-top: 10px;
+    padding-right: 5px;   
+      
+}
+.add-remove {
+    width: 30px;
+    cursor: pointer;
+    margin: 10px;
 }
 
 .dish-selector-plus:hover{

@@ -15,7 +15,8 @@ function dishesTemplate(i, category, index, singleDish, finalOnePrice) {
 
             <div class="dish-selector">
 
-                <section class="dish-selector-plus" onclick="pushToShoppingCart(${i}, '${category}', ${index})">+
+                <section  onclick="pushToShoppingCart(${i}, '${category}', ${index})">
+                    <img src="./img/add-cart-1.png" class="filter-orange"></img>
                 </section>
 
             </div>
@@ -35,12 +36,14 @@ function shoppingCartTemplate(oneDish, finalPrice) {
 
                 <section class="shopping-cart-item-amount">
 
-                    <div class="dish-selector-shopping-cart-minus" onclick="decreaseQuantity('${oneDish.Name}')">-
+                    <div onclick="decreaseQuantity('${oneDish.Name}')">
+                        <img class="add-remove" src="./img/minus.png"></img>  
                     </div>
 
                     <p>${oneDish.quantity}</p>
 
-                    <div class="dish-selector-shopping-cart-plus" onclick="addQuantity('${oneDish.Name}')">+
+                    <div onclick="addQuantity('${oneDish.Name}')">
+                        <img class="add-remove" src="./img/plus.png"></img>                    
                     </div>
 
                 </section>
