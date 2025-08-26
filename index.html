@@ -33,12 +33,21 @@
     </header>
  <nav onclick="dialogBubblingPrevention(event)" class="menu_box  menu_box_closed" id="menu">
 
-        <a onclick="renderDishes(0, 'Pizza')" class="navlink" href="#">
+        <a onclick="renderDishes(0, 'Pizza', renderDishImage(0))" class="navlink" href="#">
             Pizza
         </a>
-        <a onclick="renderDishes(1, 'Pasta')" class="navlink" href="#">
+        <a onclick="renderDishes(1, 'Pasta', renderDishImage(1))" class="navlink" href="#">
             Pasta
         </a>
+        <a onclick="renderDishes(2, 'Burger', renderDishImage(2))" class="navlink" href="#">
+            Burger
+        </a>
+        <a onclick="renderDishes(3, 'Getränke', renderDishImage(3))" class="navlink" href="#">
+            Getränke
+        </a>
+        <a onclick="renderDishes(4, 'Süsses', renderDishImage(4))" class="navlink" href="#">
+            Süsses
+        </a>        
   </nav>
 
     <!-- Main-content -->
@@ -56,8 +65,11 @@
                 <p class="lieferkosten">Die niedrigsten Lieferkosten, nur 2 Euro!!</p>              
                 <div id="scroll-point"></div>
                 <nav class="dish-selection" id="dish-selection">
-                    <button class="btn" onclick="renderDishes(0, 'Pizza')">Pizza</button>
-                    <button class="btn" onclick="renderDishes(1, 'Pasta')">Pasta</button>
+                    <button class="btn" onclick="renderDishes(0, 'Pizza'), renderDishImage(0)">Pizza</button>
+                    <button class="btn" onclick="renderDishes(1, 'Pasta'), renderDishImage(1)">Pasta</button>
+                    <button class="btn" onclick="renderDishes(2, 'Burger'), renderDishImage(2)">Burger</button>
+                    <button class="btn" onclick="renderDishes(3, 'Getränke'), renderDishImage(3)">Getränke</button>
+                    <button class="btn" onclick="renderDishes(4, 'Süsses'), renderDishImage(4)">Süsses</button>
                 </nav>
                   <img class="dish-main-img" id="dish-main-img" src="./img/pizza_main.jpg" alt="Dish Image">            
                 <div id="dish-card-place">  

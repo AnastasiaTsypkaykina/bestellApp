@@ -1,3 +1,7 @@
+let dishImage = ['./img/pizza.jpg', './img/pasta.jpg', './img/burger.jpg', './img/getränke.jpg', './img/süsses.jpg'];
+
+let shoppingCart = [];
+
 function init() {
   renderDishes(0, "Pizza");
   renderShoppingCart();
@@ -31,8 +35,6 @@ function openCloseMenu() {
 function closeMenu() {
   document.getElementById("menu").classList.add("menu_box_closed");
 }
-
-let shoppingCart = [];
 
 function renderShoppingCart() {
   shoppingCartContent();
@@ -165,4 +167,8 @@ function respShoppingCartCloser(){
     let overlay = document.getElementById('overlay');    
     dialog.classList.add('d-none');
     overlay.classList.add('d-none');
+}
+
+function renderDishImage(i) {
+    document.getElementById("dish-main-img").setAttribute("src", dishImage[i]);
 }

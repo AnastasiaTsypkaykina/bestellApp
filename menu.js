@@ -45,7 +45,7 @@ let dishes = [
         },    
         {
             "Pasta": [
-                
+
                 {
                     "Name": "Pasta Bolognese",
                     "Ingredients": "mit Fleischsauce",
@@ -62,7 +62,65 @@ let dishes = [
                     "Price": 11.50
                 },                
             ]
-        },    
+        },
+        
+        {
+            "Burger": [
+                
+                {
+                    "Name": "Burger Home made",
+                    "Ingredients": "Fleisch, frische Tomaten, Zwiebeln, hausgemachte Sauce",
+                    "Price": 15.20
+                },
+                {
+                    "Name": "Cheeseburger",
+                    "Ingredients": "Fleisch, Käse, frische Tomaten, Zwiebeln, hausgemachte Sauce",
+                    "Price": 13.00
+                },                           
+            ]
+        },
+
+        {
+            "Getränke": [
+                
+                {
+                    "Name": "Coca-Cola",
+                    "Ingredients": "Pfand inkl",
+                    "Price": 5.20
+                },
+                {
+                    "Name": "Fanta",
+                    "Ingredients": "Pfand inkl",
+                    "Price": 5.20
+                },
+                {
+                    "Name": "Mineralwasser",
+                    "Ingredients": "Pfand inkl",
+                    "Price": 3.20
+                },                
+            ]
+        },
+
+        {
+            "Süsses": [
+                
+                {
+                    "Name": "Apfelkuchen",
+                    "Ingredients": "hausgemacht, frische Äpfel",
+                    "Price": 7.20
+                },
+                {
+                    "Name": "Tiramusu",
+                    "Ingredients": "hausgemacht",
+                    "Price": 6.00
+                },
+                {
+                    "Name": "schwarzwalder Torte",
+                    "Ingredients": "hausgemacht",
+                    "Price": 5.50
+                },                
+            ]
+        },
             
 ];
 
