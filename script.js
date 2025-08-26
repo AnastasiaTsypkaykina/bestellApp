@@ -47,15 +47,15 @@ function renderShoppingCart() {
 
 function shoppingCartContent() {
   let originalShoppingCart = document.getElementById("shopping-cart-dishes");
+  let respShoppingCart = document.getElementById('resp-shopping-cart-dishes');
   originalShoppingCart.innerHTML = "";
+  respShoppingCart.innerHTML = '';
   for (let i = 0; i < shoppingCart.length; i++) {
     let price = shoppingCart[i].Price * shoppingCart[i].quantity;
     let finalPrice = price.toFixed(2);
-    originalShoppingCart.innerHTML += shoppingCartTemplate(
-      shoppingCart[i],
-      finalPrice
-    );
-  }
+    originalShoppingCart.innerHTML += shoppingCartTemplate(shoppingCart[i], finalPrice);
+    respShoppingCart.innerHTML += shoppingCartTemplate(shoppingCart[i], finalPrice);
+  };
 }
 
 function pushToShoppingCart(i, category, index) {
@@ -149,4 +149,20 @@ function closeOrderDialog() {
     let overlay = document.getElementById("overlay");
     orderDialog.classList.add('d-none');
     overlay.classList.add("d-none");    
+}
+
+function respShoppingCartOpener(){
+    let dialog = document.getElementById('dialog');
+    let overlay = document.getElementById('overlay');
+    dialog.classList.remove('d-none');
+    overlay.classList.remove('d-none');
+    
+    renderShoppingCart();
+}
+
+function respShoppingCartCloser(){
+    let dialog = document.getElementById('dialog');
+    let overlay = document.getElementById('overlay');    
+    dialog.classList.add('d-none');
+    overlay.classList.add('d-none');
 }

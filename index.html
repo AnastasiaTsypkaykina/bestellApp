@@ -93,6 +93,29 @@
     </div>
 
     <section  id="overlay" class="overlay d-none">
+            <div onclick="dialogBubblingPrevention(event)" id="dialog" class="dialog d-none">
+            <div class="inner-dialog">
+                <div class="resp-shopping-cart-positioner">
+                    <h2 class="ta-center">Warenkorb</h2>
+                    <section id="resp-shopping-cart-dishes">
+                    </section>
+                    <div class="df-sb ml-mr-20 mt-20 space-between display-flex">
+                            <p>Zwischensumme</p>
+                            <p id="resp-sub-total"></p> 
+                    </div>                            
+                    <div class="df-sb ml-mr-20 space-between display-flex">
+                            <p>Lieferkosten</p>
+                            <p id="resp-delivery-costs"></p>
+                    </div>
+                    <div class="df-sb ml-mr-20 space-between display-flex">
+                        <b>Gesamt</b>
+                        <b id="resp-total-price"></b>
+                    </div>
+
+
+
+
+
        <div onclick="dialogBubblingPrevention(event)" id="order-dialog" class="dialog-ordered d-none order-dialog">
                 <h3 class="fs-24px">Vielen Dank für Ihre Bestellung</h3>
                 </br>
@@ -101,6 +124,10 @@
 
 
     </section>
+
+    <nav class="btn-shopping-cart-position d-none-o-900px">
+        <button onclick="respShoppingCartOpener(), dialogBubblingPrevention(event)" id="btn-shopping-cart" class="btn-shopping-cart">Warenkorb</button>
+    </nav>
                 
 
                 

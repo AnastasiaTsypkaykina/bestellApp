@@ -337,3 +337,15 @@
     align-items: center;
     z-index: 1;
 }
+
+@media (max-width: 900px) {
+    .shopping-cart.d-none-u-900px {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .btn-shopping-cart {
+        display: none;
+    }
+}
