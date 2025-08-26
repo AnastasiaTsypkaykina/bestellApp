@@ -342,10 +342,68 @@
     .shopping-cart.d-none-u-900px {
         display: none;
     }
+    .dish-selection {
+        display: none;
+    }
+    .burger-menu-button {
+        position: fixed;
+        right: 70px;
+    }
+    .menu_box {
+        position: fixed;
+    }
 }
 
 @media (min-width: 900px) {
     .btn-shopping-cart {
         display: none;
+    }
+}
+@media (max-width: 490px) {
+    .pizza-logo {
+        width: 100px;
+    }
+    .img-overlay-div {
+        bottom: -45px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 412px) {
+    .pizza-logo {
+        width: 80px;
+        padding-bottom: 20px;
+    }
+    .img-overlay-div {
+        bottom: -25px;
+        width: 100px;
+        height: 100px;
+    }
+    .burger-menu-button {
+        right: 20px;
+    }
+}
+@media (max-width: 740px) {
+    .dish-card {
+        height: 220px;
+    }
+}
+
+@media (max-width: 800px) {
+    .burger-menu-button {
+        right: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .burger-menu-button {
+        right: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger-menu-button {
+        right: 30px;
     }
 }

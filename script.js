@@ -45,6 +45,10 @@ function renderShoppingCart() {
   setPrice("sub-total", `${subTotalValue.toFixed(2)} €`);
   setPrice("delivery-costs", `${deliveryCostsValue.toFixed(2)} €`);
   setPrice("total-price", `${calculateTotalValue.toFixed(2)} €`);
+
+  setPrice('resp-sub-total', `${subTotalValue.toFixed(2)} €`);
+    setPrice('resp-delivery-costs', `${deliveryCostsValue.toFixed(2)} €`);
+    setPrice('resp-total-price', `${calculateTotalValue.toFixed(2)} €`);
 }
 
 function shoppingCartContent() {
