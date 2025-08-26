@@ -94,7 +94,7 @@
 
     <section  id="overlay" class="overlay d-none">
             <div onclick="dialogBubblingPrevention(event)" id="dialog" class="dialog d-none">
-            <div class="inner-dialog">
+              <div class="inner-dialog">
                 <div class="resp-shopping-cart-positioner">
                     <h2 class="ta-center">Warenkorb</h2>
                     <section id="resp-shopping-cart-dishes">
@@ -111,26 +111,24 @@
                         <b>Gesamt</b>
                         <b id="resp-total-price"></b>
                     </div>
-
-
-
-
+                    <div class="resp-shopping-cart-buttons space-between display-flex">
+                        <button onclick="respShoppingCartCloser()" id="btn-shopping-cart-close" class="btn fs-18px z-index-5">Schließen</button>
+                        <button onclick="renderOrderDialog()" id="btn-shopping-cart-checkout" class="btn fs-18px z-index-5">Bestellen</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
 
        <div onclick="dialogBubblingPrevention(event)" id="order-dialog" class="dialog-ordered d-none order-dialog">
                 <h3 class="fs-24px">Vielen Dank für Ihre Bestellung</h3>
                 </br>
                 <p>Ihre Lieferung wird in den nächsten </br> 60 Minuten bei Ihnen eintreffen</p>
-        </div>
-
-
+      </div>
     </section>
 
     <nav class="btn-shopping-cart-position d-none-o-900px">
         <button onclick="respShoppingCartOpener(), dialogBubblingPrevention(event)" id="btn-shopping-cart" class="btn-shopping-cart">Warenkorb</button>
-    </nav>
-                
-
-                
+    </nav>      
 
 
 

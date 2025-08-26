@@ -136,7 +136,7 @@ function renderOrderDialog() {
     let overlay = document.getElementById('overlay');
 
     if (shoppingCart.length >= 1) {
-        //respShoppingCartCloser();
+        respShoppingCartCloser();
         orderDialog.classList.remove('d-none');
         overlay.classList.remove('d-none');
         shoppingCart = [];
