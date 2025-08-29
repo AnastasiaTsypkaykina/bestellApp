@@ -10,7 +10,7 @@ function init() {
 function renderDishes(i, category) {
   document.getElementById(
     "dish-card-place"
-  ).innerHTML = `<h3 class="dishes-header">${category}</h3>`;
+  ).innerHTML = `<h2 class="dishes-header">${category}</h2>`;
   for (let index = 0; index < dishes[i][category].length; index++) {
     let onePrice = dishes[i][category][index].Price * 1;
     let finalOnePrice = onePrice.toFixed(2);
@@ -46,16 +46,16 @@ function renderShoppingCart() {
   setPrice("delivery-costs", `${deliveryCostsValue.toFixed(2)} €`);
   setPrice("total-price", `${calculateTotalValue.toFixed(2)} €`);
 
-  setPrice('resp-sub-total', `${subTotalValue.toFixed(2)} €`);
-    setPrice('resp-delivery-costs', `${deliveryCostsValue.toFixed(2)} €`);
-    setPrice('resp-total-price', `${calculateTotalValue.toFixed(2)} €`);
+  setPrice("resp-sub-total", `${subTotalValue.toFixed(2)} €`);
+    setPrice("resp-delivery-costs", `${deliveryCostsValue.toFixed(2)} €`);
+    setPrice("resp-total-price", `${calculateTotalValue.toFixed(2)} €`);
 }
 
 function shoppingCartContent() {
   let originalShoppingCart = document.getElementById("shopping-cart-dishes");
   let respShoppingCart = document.getElementById('resp-shopping-cart-dishes');
   originalShoppingCart.innerHTML = "";
-  respShoppingCart.innerHTML = '';
+  respShoppingCart.innerHTML = "";
   for (let i = 0; i < shoppingCart.length; i++) {
     let price = shoppingCart[i].Price * shoppingCart[i].quantity;
     let finalPrice = price.toFixed(2);
@@ -138,41 +138,48 @@ function removeFromCart(name) {
 }
 
 function renderOrderDialog() {
-    let orderDialog = document.getElementById('order-dialog');
-    let overlay = document.getElementById('overlay');
+    let orderDialog = document.getElementById("order-dialog");
+    let overlay = document.getElementById("overlay");
 
     if (shoppingCart.length >= 1) {
-        respShoppingCartCloser();
-        orderDialog.classList.remove('d-none');
-        overlay.classList.remove('d-none');
+        closeRespShoppingCart();
+        orderDialog.classList.remove("d-none");
+        overlay.classList.remove("d-none");
         shoppingCart = [];
         renderShoppingCart();        
     };
 }
 
 function closeOrderDialog() {
-    let orderDialog = document.getElementById('order-dialog');
+    let orderDialog = document.getElementById("order-dialog");
     let overlay = document.getElementById("overlay");
-    orderDialog.classList.add('d-none');
+    orderDialog.classList.add("d-none");
     overlay.classList.add("d-none");    
 }
 
-function respShoppingCartOpener(){
-    let dialog = document.getElementById('dialog');
-    let overlay = document.getElementById('overlay');
-    dialog.classList.remove('d-none');
+function openRespShoppingCart(){
+    let dialog = document.getElementById("dialog");
+    let overlay = document.getElementById("overlay");
+    dialog.classList.remove("d-none");
     overlay.classList.remove('d-none');
     
     renderShoppingCart();
 }
 
-function respShoppingCartCloser(){
-    let dialog = document.getElementById('dialog');
-    let overlay = document.getElementById('overlay');    
-    dialog.classList.add('d-none');
-    overlay.classList.add('d-none');
+function closeRespShoppingCart(){
+    let dialog = document.getElementById("dialog");
+    let overlay = document.getElementById("overlay");    
+    dialog.classList.add("d-none");
+    overlay.classList.add("d-none");
 }
 
 function renderDishImage(i) {
     document.getElementById("dish-main-img").setAttribute("src", dishImage[i]);
+}
+
+function toggleOverlay() {
+  let dialogRef = document.getElementById("order-dialog");
+  let overlayRef = document.getElementById("overlay");
+  overlayRef.classList.add("d-none");
+  dialogRef.classList.add("d-none");
 }

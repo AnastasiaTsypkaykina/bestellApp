@@ -1,3 +1,7 @@
+h1 {
+    font-size: 32px;
+}
+
 .navbar{
     height: 100px;
     background-color: rgb(255 139 0);
@@ -133,8 +137,28 @@
 .shopping-cart-item{
     margin-top: 20px;
     z-index: 3;
-
 }
+.shopping-cart-dishes {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.resp-shopping-cart-dishes {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.dialog-close {
+  color: #6a97a8;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  left: 275px;
+  bottom: 80px;
+  top: auto;
+  padding-right: 20px;
+}
+
 .shopping-cart-amount-and-price{
     display: flex;
     align-items: center;
@@ -158,7 +182,7 @@
     font-size: 24px;    
     padding: 5px 20px;
     border-radius: 17px;
-    border: none;
+    border-color: black;
     background-color: rgb(215, 215, 215);
     cursor: pointer;
 }
@@ -198,11 +222,17 @@
     margin: 10px;
 }
 
-.dish-selector-plus:hover{
-    transform: scale(1.3);
+.add-remove:hover {
+    transform: scale(1.06);    
 }
 
-.dish-selector-plus:active{
+.dish-selector:hover{
+    transform: scale(1.06);
+    background-color: rgb(255 139 0 / 26%);
+
+}
+
+.dish-selector:active{
     transform: scale(0.9);
 }
 
@@ -383,6 +413,10 @@
     .burger-menu-button {
         right: 20px;
     }
+    .resp-shopping-cart-dishes {
+    max-height: 500px;
+    overflow-y: scroll;
+}
 }
 @media (max-width: 740px) {
     .dish-card {
